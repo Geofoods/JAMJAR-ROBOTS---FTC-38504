@@ -10,21 +10,20 @@ import com.qualcomm.robotcore.hardware.DcMotor;
  *   Left stick  : push forward/back to drive, push left/right to strafe
  *   Right stick : push left/right to rotate (yaw)
  *
- * Wheel layout (as requested):
- *   motor 0 = front right
- *   motor 1 = front left
- *   motor 2 = back right
- *   motor 3 = back left
+ * Wheel layout (as configured on the Driver Station):
+ *   motorFrontRight = motor port 0
+ *   motorFrontLeft  = motor port 1
+ *   motorBackRight  = motor port 2
+ *   motorBackLeft   = motor port 3
  */
 @TeleOp(name = "Mecanum Drive", group = "Drive")
 public class MecanumDrive extends LinearOpMode {
 
     // These names MUST match the motor names in your Driver Station robot configuration.
-    // "motor0"..."motor3" are the default config names; change them here if yours differ.
-    private static final String FRONT_RIGHT_NAME = "motor0";
-    private static final String FRONT_LEFT_NAME  = "motor1";
-    private static final String BACK_RIGHT_NAME  = "motor2";
-    private static final String BACK_LEFT_NAME   = "motor3";
+    private static final String FRONT_RIGHT_NAME = "motorFrontRight";
+    private static final String FRONT_LEFT_NAME  = "motorFrontLeft";
+    private static final String BACK_RIGHT_NAME  = "motorBackRight";
+    private static final String BACK_LEFT_NAME   = "motorBackLeft";
 
     // Joystick values below this are treated as zero so the robot does not creep.
     private static final double DEADBAND = 0.05;
